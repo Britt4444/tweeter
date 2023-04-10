@@ -20,8 +20,17 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
+  width: 100%;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  background-color: #f4f1ec;
+}

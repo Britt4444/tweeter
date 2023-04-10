@@ -6,7 +6,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
   background-image: url("../images/cubes.png");
   background-color: #d79922;
 }
