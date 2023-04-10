@@ -7,11 +7,13 @@ nav {
   display: flex;
   justify-content: space-between;
   padding-left: 1.5em;
+  position: fixed;
 }
 
 nav span {
   font-family: 'Bungee', sans-serif;
   align-self: center;
+  font-size: 36px;
 }
 
 #write-tweet {
