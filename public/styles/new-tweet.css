@@ -1,0 +1,59 @@
+section.new-tweet {
+  font-weight: bold;
+  margin-right: 5%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+section.new-tweet label {
+  font-family: 'Source Sans Pro', sans-serif;
+  border-bottom: 4px solid #545149;
+  font-size: larger;
+  display: flex;
+  align-items: end;
+  padding-bottom: 0.5em;
+  padding-right: 2.5em;
+}
+
+section.new-tweet textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  border-bottom: 4px solid #545149;
+  background-color: transparent;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  overflow: hidden;
+}
+
+
+section.new-tweet div {
+  font-family: 'Bungee', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75em;
+}
+
+.new-tweet button {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  border: none;
+}
+
+
+
+
+/* <section class ="new-tweet">
+        <h2>Compose Tweet</h2>
+        <!-- submit tweet form -->
+        <form action="/tweets/" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section> */
