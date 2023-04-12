@@ -42,6 +42,10 @@ section.new-tweet div {
   border: none;
 }
 
+.counter.over-limit {
+  color: red;
+}
+
 
 
 
