@@ -1,26 +1,22 @@
-section.new-tweet {
+section.new-tweet form {
+  display: grid;
   font-weight: bold;
+  background-color:#f4f1ec;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 2fr;
+  row-gap: 15px;
   margin-right: 5%;
   margin-left: 5%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-section.new-tweet label {
-  font-family: 'Source Sans Pro', sans-serif;
-  border-bottom: 4px solid #545149;
-  font-size: larger;
-  display: flex;
-  align-items: end;
-  padding-bottom: 0.5em;
-  padding-right: 2.5em;
+  margin-top: 2em;
 }
 
 section.new-tweet textarea {
+  grid-row: 1;
+  justify-self: end;
   font-family: 'Source Sans Pro', sans-serif;
   border-bottom: 4px solid #545149;
   background-color: transparent;
+  padding-left: 2em;
   outline: none;
   border-top: none;
   border-right: none;
@@ -28,36 +24,33 @@ section.new-tweet textarea {
   overflow: hidden;
 }
 
-
-section.new-tweet div {
-  font-family: 'Bungee', sans-serif;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.75em;
+section.new-tweet label {
+  grid-row: 1;
+  justify-self: start;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-bottom: 4px solid #545149;
+  font-size: larger;
+  padding-right: 5em;
 }
 
-.new-tweet button {
+section.new-tweet button {
+  font-family: 'Bungee', sans-serif;
+  grid-row: 2;
+  justify-self: start;
+  width: 4.5em;
+  height: 2em;
   color: #FFFFFF;
   background-color: #4056A1;
   border: none;
 }
 
-.counter.over-limit {
-  color: red;
+form output.counter {
+  font-family: 'Bungee', sans-serif;
+  justify-self: end;
 }
 
 
-
-
-/* <section class ="new-tweet">
-        <h2>Compose Tweet</h2>
-        <!-- submit tweet form -->
-        <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section> */
+.counter.over-limit {
+  grid-row: 2;
+  color: red;
+}
