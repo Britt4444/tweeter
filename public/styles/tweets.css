@@ -1,0 +1,89 @@
+.container article {
+  border: 4px solid #545149;
+  margin: 2em 2.75em 2em 2.75em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 1fr;
+  padding: 0.5em;
+}
+
+.container article:hover {
+  box-shadow: 4px 4px 0px 1px gray;
+}
+
+article header {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 4fr;
+  grid-column: span 3;
+  grid-template-rows: min-content;
+  padding: 1em;
+}
+
+header img {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+header h3 {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: start;
+  align-items: center;
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+header address {
+  grid-row: 1;
+  justify-self: end;
+  padding: 1em;
+}
+
+article p {
+  grid-row: 2;
+  grid-column: span 3;
+  justify-self: start;
+  align-items: center;
+  padding: 1em;
+  font-weight: bold;
+}
+
+article footer {
+  display: grid;
+  grid-column: span 3;
+  grid-template-rows: min-content;
+  border-top: 4px solid #545149;
+  padding: 1em;
+  margin-top: -1em;
+  font-size: smaller;
+}
+
+article time {
+  grid-row: 1;
+  justify-self: start;
+}
+
+article span {
+  grid-row: 1;
+  justify-self: end;
+}
+
+
+
+
+
+/*
+      <article>
+        <header>
+          <h3>Avatar + Cowper</h3>
+          <address>@Britt</address>
+        </header>
+        <p>Hi! This is my first post. How cool is this?!</p>
+        <footer>
+          <time>5 days ago</time>
+          <i class="fa-solid fa-flag" style="color:#4056A1"></i>
+          <i class="fa-solid fa-retweet" style="color:#4056A1"></i>
+          <i class="fa-solid fa-heart" style="color:#4056A1"></i>
+        </footer>
+      </article>
+*/
