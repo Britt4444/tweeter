@@ -67,23 +67,3 @@ article span {
   grid-row: 1;
   justify-self: end;
 }
-
-
-
-
-
-/*
-      <article>
-        <header>
-          <h3>Avatar + Cowper</h3>
-          <address>@Britt</address>
-        </header>
-        <p>Hi! This is my first post. How cool is this?!</p>
-        <footer>
-          <time>5 days ago</time>
-          <i class="fa-solid fa-flag" style="color:#4056A1"></i>
-          <i class="fa-solid fa-retweet" style="color:#4056A1"></i>
-          <i class="fa-solid fa-heart" style="color:#4056A1"></i>
-        </footer>
-      </article>
-*/
