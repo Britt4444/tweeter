@@ -6,20 +6,22 @@ section.new-tweet form {
   grid-template-rows: 2fr 2fr;
   row-gap: 15px;
   margin: 2em 2.8em 0em 2.8em;
+  white-space: normal;
 }
 
-section.new-tweet textarea {
+section.new-tweet textarea { /* Overlaps label element when window is minimized! */
   grid-row: 1;
   justify-self: end;
   font-family: 'Source Sans Pro', sans-serif;
   border-bottom: 4px solid #545149;
   background-color: transparent;
-  padding-left: 2em;
+  padding-left: 8em;
   outline: none;
   border-top: none;
   border-right: none;
   border-left: none;
   overflow: hidden;
+  resize: none;
 }
 
 section.new-tweet label {
@@ -28,7 +30,7 @@ section.new-tweet label {
   font-family: 'Source Sans Pro', sans-serif;
   border-bottom: 4px solid #545149;
   font-size: larger;
-  padding-right: 5em;
+  padding-right: 2.5em;
 }
 
 section.new-tweet button {

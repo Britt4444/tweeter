@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -53,10 +56,10 @@
     <main class="container">
       <section class ="new-tweet">
         <!-- submit tweet form -->
-        <form action="/tweets/" method="POST">
+        <form action="/tweets/" method="POST" name="tweet-form">
             <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text" rows="2" cols="70"></textarea>
-            <button type="submit">Tweet</button>
+            <textarea name="text" id="tweet-text" rows="3" cols="60"></textarea>
+            <button type="submit" value="submit">Tweet</button>
             <!-- Character counter -->
             <output name="counter" class="counter" for="tweet-text">140</output>
         </form>

@@ -73,4 +73,20 @@ $(document).ready(() => {
 
   renderTweets(tweetData);
 
+  //ajax POST request to submit-tweet form and prevent default behaviour
+  $('.new-tweet form').submit(function (e) {
+    e.preventDefault();
+    let formData = $(this).serialize();
+    $.ajax({
+      url: $(this).attr('action'),
+      type: "POST",
+      data: formData,
+      success: function () {
+        console.log(formData);
+      },
+      error: function() {
+        console.log('error: ', error);
+      },
+    });
+  });
 });
