@@ -5,6 +5,13 @@
 
 $(document).ready(() => {
 
+  //safely render possible insecure text by escaping it
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // $("time.timeago").timeago(); //this is not a function?
 
   // tweet element html content
@@ -15,7 +22,7 @@ $(document).ready(() => {
                 <h3>${tweet.user.name}</h3>
                 <address>${tweet.user.handle}</address>
               </header>
-              <p>${tweet.content.text}</p>
+              <p>${escape(tweet.content.text)}</p>
               <footer>
                 <time class="timeago">${tweet.created_at}</time>
                 <span class="fa-solid fa-flag" style="color:#4056A1">
