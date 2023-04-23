@@ -3,39 +3,38 @@ section.new-tweet form {
   font-weight: bold;
   background-color:#f4f1ec;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: 2fr 2fr 2fr;
   row-gap: 15px;
-  margin: 2em 2.8em 0em 2.8em;
-  white-space: normal;
+  margin: 2em 2.75em 0em 2.75em;
 }
 
 section.new-tweet textarea { /* Overlaps label element when window is minimized! */
-  grid-row: 1;
-  justify-self: end;
+  grid-row: 2;
+  grid-column: span 3;
+  justify-self: start;
+  margin-top: -0.5em;
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
   border-bottom: 4px solid #545149;
   background-color: transparent;
-  padding-left: 8em;
   outline: none;
   border-top: none;
   border-right: none;
   border-left: none;
   overflow: hidden;
-  resize: none;
 }
 
 section.new-tweet label {
   grid-row: 1;
+  grid-column: span 2;
   justify-self: start;
   font-family: 'Source Sans Pro', sans-serif;
-  border-bottom: 4px solid #545149;
   font-size: larger;
-  padding-right: 2.5em;
 }
 
 section.new-tweet button {
   font-family: 'Bungee', sans-serif;
-  grid-row: 2;
+  grid-row: 3;
   justify-self: start;
   width: 4.5em;
   height: 2em;
@@ -46,12 +45,13 @@ section.new-tweet button {
 }
 
 form output.counter {
+  grid-row: 3;
   font-family: 'Bungee', sans-serif;
   justify-self: end;
 }
 
 
 .counter.over-limit {
-  grid-row: 2;
+  grid-row: 3;
   color: red;
 }

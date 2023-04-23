@@ -27,6 +27,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/2.0.2/timeago.min.js" integrity="sha512-sl01o/gVwybF1FNzqO4NDRDNPJDupfN0o2+tMm4K2/nr35FjGlxlvXZ6kK6faa9zhXbnfLIXioHnExuwJdlTMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -58,7 +59,7 @@
         <!-- submit tweet form -->
         <form action="/tweets/" method="POST" name="tweet-form">
             <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text" rows="3" cols="60"></textarea>
+            <textarea name="text" id="tweet-text" rows="2" cols="105"></textarea>
             <button type="submit" value="submit">Tweet</button>
             <!-- Character counter -->
             <output name="counter" class="counter" for="tweet-text">140</output>
