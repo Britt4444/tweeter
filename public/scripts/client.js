@@ -2,7 +2,6 @@
 /* eslint-env browser */
 /* elsint-env timeago */
 
-
 $(document).ready(() => {
 
   //safely render possible insecure text by escaping it
@@ -61,32 +60,53 @@ $(document).ready(() => {
 
   loadTweets();
 
+  // slide textarea into view and focus it when nav bar button clicked
+  $('#write-tweet span').on('click', function() {
+    $('.new-tweet').slideToggle();
+    $('.new-tweet textarea').focus();
+  });
+
   //ajax POST request to submit-tweet form and prevent default behaviour
   $('.new-tweet form').submit(function (e) {
     e.preventDefault();
-    let formData = $(this).serialize();
+    const errorMsg = $(this).siblings('h3');
+    const textarea = $(this).children('textarea');
+    const input = textarea.val().trim();
+
     //use textarea input to verify conditionals
-    const textarea = $.trim($('#tweet-text').val());
-    if (!textarea.length) {
-      alert ("No tweet submitted!");
-    } else if (textarea.length > 140) {
-      alert("Your tweet is too long!");
+    if (!input.length) {
+      error = 'Cannot submit an empty tweet!';
+      errorMsg.show();
+      $("#error-msg").text(error);
+      errorMsg.slideDown(600);
+    } else if (input.length > 140) {
+      error = 'Your tweet is too long!';
+      errorMsg.show();
+      $("#error-msg").text(error);
+      errorMsg.slideDown(600);
     } else {
+      errorMsg.slideUp(600);
       $.ajax({
-        url: $(this).attr('action'),
-        type: "POST",
-        data: formData,
-        success: function () {
+          url: $(this).attr('action'),
+          type: "POST",
+          data: $(this).serialize(),
+          success: function () {
           //empty textarea
-          $('#tweet-text').val('');
+            $('#tweet-text').val('');
           //reset counter to 140
-          $('.counter').text('140');
-          loadTweets();
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          console.log('error: ', errorThrown);
-        },
+            $('.counter').text('140');
+            loadTweets();
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.log('error: ', error);
+          },
       });
-    }
+    };
   });
 });
+
+
+$('.new-tweet p').append('<b>Error:</b> All tweets must contain at least one character. Your tweet currently does not.');
+      setTimeout(() => {
+        $('.new-tweet p').slideDown();
+      }, 600);

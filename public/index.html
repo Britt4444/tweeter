@@ -32,15 +32,16 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/composer-scroll-up.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>Tweeter</span>
+      <h1>Tweeter</h1>
       <div id="write-tweet">
         <p><strong>Write</strong> a new tweet</p>
-        <i class="fa-solid fa-angles-down" style="color: #ce1609"></i>
+        <span class="fa-solid fa-angles-down" style="color: #ce1609"></span>
       </div>
     </nav>
     <header id="user-header">
@@ -56,17 +57,24 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class ="new-tweet">
+        <!-- error message handling -->
+        <h3>
+          <i class="fas fa-exclamation-circle"></i>
+          <span id='error-msg'></span>
+        </h3>
         <!-- submit tweet form -->
         <form action="/tweets/" method="POST" name="tweet-form">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text" rows="2" cols="105"></textarea>
-            <button type="submit" value="submit">Tweet</button>
-            <!-- Character counter -->
-            <output name="counter" class="counter" for="tweet-text">140</output>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text" rows="2" cols="105"></textarea>
+          <button type="submit" value="submit">Tweet</button>
+          <!-- Character counter -->
+          <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
       </section>
       <!-- Individual tweets -->
       <section id="tweet-container"></section>
     </main>
+    <!-- scroll-to-top button: currently not showing up!!-->
+    <button class="scroll-up"><i class="fa-thin fa-up-to-line" style="color: white;"></i></button>
   </body>
 </html>

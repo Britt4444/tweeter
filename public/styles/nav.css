@@ -1,3 +1,4 @@
+/* top navigation bar */
 nav {
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
@@ -11,12 +12,14 @@ nav {
   z-index: 100;
 }
 
-nav span {
+/* TWEETER */
+nav h1 {
   font-family: 'Bungee', sans-serif;
   align-self: center;
   font-size: 36px;
 }
 
+/* contains <p> and span button */
 #write-tweet {
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
@@ -29,7 +32,14 @@ nav span {
   margin-bottom: 0;
 }
 
-#write-tweet i {
+/* arrow button to toggle new-tweet form */
+#write-tweet span {
   align-items: center;
   padding-left: 3.25em;
+}
+
+/* on mouse hover over arrow */
+#write-tweet span:hover {
+  transform: translateY(8px);
+  translate: transform 400ms ease-in-out;
 }

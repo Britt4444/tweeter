@@ -1,37 +1,45 @@
+/* contains all tweets */
 .container article {
   border: 4px solid #545149;
   margin: 2.75em 2.75em 2.75em 2.75em;
+  display: flex;
   flex-direction: column;
   padding: 0.5em;
 }
 
+/* with mouse hover */
 .container article:hover {
   box-shadow: 4px 4px 0px 1px gray;
 }
 
+/* user info */
 article header {
   display: flex;
   padding: 1em;
 }
 
-
+/* user name */
 header h3 {
   font-weight: lighter;
   font-size: 1em;
   margin-left: 0.5em;
 }
 
+/* user handle */
 header address {
   margin-left: auto;
 }
 
+/* tweet content */
 article p {
   display: flex;
   justify-content: flex-start;
   padding: 1em;
   font-weight: bold;
+  word-break: break-word;
 }
 
+/* time ago and navigation icons */
 article footer {
   display: flex;
   border-top: 4px solid #545149;
@@ -41,7 +49,33 @@ article footer {
   font-size: smaller;
 }
 
+/* navigation icons */
 article span {
   display: flex;
   margin-left: auto;
+}
+
+/* scroll-to-top button*/
+.scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  z-index: 9;
+  padding: 15px;
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  font-size: 18px;
+  opacity: 75%;
+  background-color:#4056A1;
+  border: none;
+}
+
+/* to-top button on mouse hover */
+.scroll-up:hover {
+  background-color: #d79922;
+  opacity: 75%;
+  transform: translateY(-10px);
+  translate: transform 400ms ease-in-out;
 }
