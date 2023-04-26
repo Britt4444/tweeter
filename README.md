@@ -1,10 +1,12 @@
-# Tweeter Project
+# 🐤 Tweeter Project 🐤
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. This app highlights the adaptive strenth of using Sass to implement responsive design. By preventing cross-site scripting, you can feel secure curating new tweets in this minimalist, Twitter-like environment.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Final Product
 
-## Getting Started
+
+
+## Getting Started 👇
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
 2. Clone your repository onto your local device.
@@ -16,3 +18,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body parser
+- Chance
+
+## Technology
+
+- This project was heavily focused on front-end development and design through the use of HTML, CSS, Sass, JS, jQuery, and AJAX.
+- On the backend, the server framework was developed using Node and Express. 

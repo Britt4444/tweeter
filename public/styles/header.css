@@ -13,7 +13,6 @@
   flex-direction: column;
   background-image: url("../images/cubes.png");
   background-color: #d79922;
-  font-weight: lighter;
   position: relative;
 }
 
@@ -29,6 +28,11 @@
 header h2 {
   margin-top: -0.5em;
   color: #FFFFFF;
+  font-weight: 300;
+}
+
+header h2 strong {
+  font-weight: 600;
 }
 
 /* Responsive Design */
