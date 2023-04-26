@@ -12,7 +12,7 @@ section.new-tweet {
 section.new-tweet form {
   display: grid;
   font-weight: bold;
-  background-color: #f4f1ec;
+  background-color: #FFFFFF;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 2fr 2fr;
   row-gap: 15px;
@@ -53,7 +53,7 @@ section.new-tweet button {
   justify-self: start;
   width: 4.5em;
   height: 2em;
-  color: #f4f1ec;
+  color: #FFFFFF;
   background-color: #4056A1;
   border: none;
   border-radius: 10px;
