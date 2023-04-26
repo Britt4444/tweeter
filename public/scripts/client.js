@@ -1,6 +1,6 @@
 /* eslint-env jquery */
 /* eslint-env browser */
-/* elsint-env timeago */
+/* global timeago */
 
 $(document).ready(() => {
 
@@ -41,11 +41,11 @@ $(document).ready(() => {
   };
 
   //async fetch request to /tweets
-  async function loadTweets() {
+  const loadTweets = async function() {
     const response = await fetch('http://localhost:8080/tweets');
     const data = await response.json();
     renderTweets(data);
-  }
+  };
 
   loadTweets();
 
@@ -56,7 +56,7 @@ $(document).ready(() => {
   });
 
   //ajax POST request to submit-tweet form and prevent default behaviour
-  $('.new-tweet form').submit(function (e) {
+  $('.new-tweet form').submit(function(e) {
     e.preventDefault();
     const errorMsg = $(this).siblings('h3');
     const textarea = $(this).children('textarea');
@@ -81,17 +81,17 @@ $(document).ready(() => {
         url: $(this).attr('action'),
         type: "POST",
         data: $(this).serialize(),
-        success: function () {
+        success: function() {
           //empty textarea
           $('#tweet-text').val('');
           //reset counter to 140
           $('.counter').text('140');
           loadTweets();
         },
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function(jqXHR, textStatus, errorThrown) {
           console.log('error: ', errorThrown);
         },
       });
-    };
+    }
   });
 });

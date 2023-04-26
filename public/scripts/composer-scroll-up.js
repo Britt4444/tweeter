@@ -20,7 +20,7 @@ $(document).ready(function() {
   toTopBtn.on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
-        scrollTop: 0
+      scrollTop: 0
     }, '300');
     $('.new-tweet').css('display', 'block');
     $('.new-tweet textarea').focus();
