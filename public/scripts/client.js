@@ -30,15 +30,6 @@ $(document).ready(() => {
             </article>`;
   };
 
-  //calculate how many days ago tweet was written
-  // const tweetTimestamp = (tweet) => {
-  //   const current = Date.now();
-  //   const tweetTime = tweet.created_at;
-  //   const timeDiff = $.timeago(current - tweetTime);
-  //   console.log(timeDiff);
-  //   return timeDiff;
-  // };
-
   // fn to append each individual tweet from array of tweet data to the tweet-container
   const renderTweets = function(tweets) {
     // dynamically empty tweet-container of contents
@@ -71,12 +62,14 @@ $(document).ready(() => {
     const textarea = $(this).children('textarea');
     const input = textarea.val().trim();
 
-    //use textarea input to verify conditionals
+    //if there is no textarea input
     if (!input.length) {
+      //display and set error text
       let error = 'Cannot submit an empty tweet!';
       errorMsg.show();
       $("#error-msg").text(error);
       errorMsg.slideDown(600);
+    // if there are more than 140 characters
     } else if (input.length > 140) {
       let error = 'Your tweet is too long!';
       errorMsg.show();
@@ -102,9 +95,3 @@ $(document).ready(() => {
     };
   });
 });
-
-
-$('.new-tweet p').append('<b>Error:</b> All tweets must contain at least one character. Your tweet currently does not.');
-setTimeout(() => {
-  $('.new-tweet p').slideDown();
-}, 600);

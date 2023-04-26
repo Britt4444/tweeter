@@ -25,10 +25,11 @@ section.new-tweet label {
 
 /* new tweet text input field */
 section.new-tweet textarea {
+  width: 100%;
   grid-row: 2;
-  grid-column: span 3;
+  grid-column: span 2;
   justify-self: start;
-  margin-top: -0.5em;
+  margin-top: -1em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   border-bottom: 4px solid #545149;
@@ -76,4 +77,22 @@ form output.counter {
   margin: 2em 2.5em 0em 2.5em;
   padding: 0.5em;
   padding-left: 1em;
+}
+
+/* Responsive Design */
+
+/* desktop version */
+@media only screen and (min-width: 1024px) {
+  section.new-tweet {
+    margin-left: 38%;
+    margin-top: -9em;
+    width: 67%;
+  }
+}
+
+/* print preview */
+@media print {
+  section.new-tweet {
+    visibility: hidden;
+  }
 }

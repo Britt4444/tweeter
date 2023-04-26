@@ -80,3 +80,13 @@ article span {
   transform: translateY(-10px);
   translate: transform 400ms ease-in-out;
 }
+
+/* Responsive Design */
+
+/* desktop version */
+@media only screen and (min-width: 1024px) {
+  .container article {
+    margin-left: 43%;
+    width: 58%;
+  }
+}

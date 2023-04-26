@@ -1,6 +1,5 @@
 #user-header {
-  padding-top: 120px;
-  height: 520px;
+  height: 10%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -8,14 +7,36 @@
   flex-direction: column;
   background-image: url("../images/cubes.png");
   background-color: #d79922;
+  font-weight: lighter;
 }
 
+/* User avatar */
 header img {
   margin-top: 0;
   margin-bottom: 0;
 }
 
+/* Username */
 header h2 {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+/* Responsive Design */
+
+/* desktop version */
+@media only screen and (min-width: 1024px) {
+  #user-header {
+    width: 30%;
+    height: 400px;
+    padding-top: 120px;
+    position: relative;
+    top: 10em;
+    left: 2em;
+  }
+  header h2 {
+    margin-bottom: 3em;
+    color: #FFFFFF;
+  }
 }

@@ -2,14 +2,15 @@
 nav {
   font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
-  height: 120px;
+  height: 20%;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #d79922;
   display: flex;
   justify-content: space-between;
   padding-left: 1.5em;
-  position: fixed;
   z-index: 100;
+  background-image: url("../images/cubes.png");
+  background-position: center left;
 }
 
 /* TWEETER */
@@ -42,4 +43,23 @@ nav h1 {
 #write-tweet span:hover {
   transform: translateY(8px);
   translate: transform 400ms ease-in-out;
+}
+
+/* Responsive Design */
+
+/* desktop version */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    position: fixed;
+    background-image: none;
+    height: 120px;
+  }
+}
+
+/* print preview */
+@media print {
+  #write-tweet {
+    visibility: hidden;
+  }
 }
