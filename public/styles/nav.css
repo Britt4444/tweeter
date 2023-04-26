@@ -1,7 +1,12 @@
-/* top navigation bar */
+/* Page colours */
+/* Geometric background */
+/* Fonts */
+/* Displays */
+/* Recurring Values */
+/* NESTED nav; top navigation bar */
 nav {
-  font-family: 'Bungee', sans-serif;
-  color: #FFFFFF;
+  font-family: "Bungee", sans-serif;
+  color: #f4f1ec;
   height: 20%;
   width: 100%;
   background-color: #d79922;
@@ -11,42 +16,35 @@ nav {
   z-index: 100;
   background-image: url("../images/cubes.png");
   background-position: center left;
+  /* TWEETER */
+  /* contains <p> and span button */
+  /* arrow button to toggle new-tweet form */
+  /* on mouse hover over arrow */
 }
-
-/* TWEETER */
 nav h1 {
-  font-family: 'Bungee', sans-serif;
   align-self: center;
   font-size: 36px;
 }
-
-/* contains <p> and span button */
-#write-tweet {
+nav #write-tweet {
   flex-direction: column;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   padding-right: 1.5em;
-  padding-top: 0.75em;
+  padding-top: 0.25em;
   justify-content: center;
 }
-
-#write-tweet p {
+nav #write-tweet p {
   margin-bottom: 0;
 }
-
-/* arrow button to toggle new-tweet form */
-#write-tweet span {
+nav #write-tweet span {
   align-items: center;
-  padding-left: 3.25em;
+  margin-left: 3.25em;
 }
-
-/* on mouse hover over arrow */
-#write-tweet span:hover {
+nav #write-tweet span:hover {
   transform: translateY(8px);
   translate: transform 400ms ease-in-out;
 }
 
 /* Responsive Design */
-
 /* desktop version */
 @media only screen and (min-width: 1024px) {
   nav {
@@ -56,7 +54,6 @@ nav h1 {
     height: 120px;
   }
 }
-
 /* print preview */
 @media print {
   #write-tweet {

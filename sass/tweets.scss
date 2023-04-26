@@ -1,12 +1,16 @@
-/* Page colours */
-/* Geometric background */
-/* Fonts */
-/* Displays */
-/* Recurring Values */
+@use 'variables';
+
 /* Mixin */
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* contains all tweets */
 .container article {
-  border: 4px solid #545149;
+  border: 4px solid variables.$border-brown;
   margin: 2.75em 2.75em 2.75em 2.75em;
   display: flex;
   flex-direction: column;
@@ -15,12 +19,12 @@
 
 /* with mouse hover */
 .container article:hover {
-  box-shadow: 4px 4px 0px 1px grey;
+  box-shadow: 4px 4px 0px 1px variables.$box-shadow;
 }
 
 /* user info */
 article header {
-  display: flex;
+  display: variables.$flex-box;
   padding: 1em;
 }
 
@@ -38,7 +42,7 @@ header address {
 
 /* tweet content */
 article p {
-  display: flex;
+  display: variables.$flex-box;
   justify-content: flex-start;
   padding: 1em;
   font-weight: bold;
@@ -47,8 +51,8 @@ article p {
 
 /* time ago and navigation icons */
 article footer {
-  display: flex;
-  border-top: 4px solid #545149;
+  display: variables.$flex-box;
+  border-top: 4px solid variables.$border-brown;
   padding: 1em;
   padding-left: 1.25em;
   padding-right: 1.25em;
@@ -57,13 +61,13 @@ article footer {
 
 /* navigation icons */
 article span {
-  display: flex;
+  display: variables.$flex-box;
   margin-left: auto;
 }
 
 /* scroll-to-top button*/
 .scroll-up {
-  display: none;
+  display: variables.$none;
   position: fixed;
   bottom: 25px;
   right: 30px;
@@ -74,27 +78,25 @@ article span {
   border-radius: 50%;
   font-size: 18px;
   opacity: 75%;
-  background-color: #4056A1;
-  color: #f4f1ec;
-  border: none;
+  background-color: variables.$blue;
+  color: variables.$white;
+  border: variables.$none;
 }
 
 /* to-top button on mouse hover */
 .scroll-up:hover {
-  background-color: #d79922;
+  background-color: variables.$mustard;
   opacity: 75%;
   transform: translateY(-10px);
   translate: transform 400ms ease-in-out;
 }
 
 .scroll-up i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include vertical-align();
 }
 
 /* Responsive Design */
+
 /* desktop version */
 @media only screen and (min-width: 1024px) {
   .container article {

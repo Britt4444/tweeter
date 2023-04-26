@@ -1,37 +1,39 @@
-/* Page colours */
-/* Geometric background */
-/* Fonts */
-/* Displays */
-/* Recurring Values */
-/* Mixin */
-#user-header {
-  height: 10%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("../images/cubes.png");
-  background-color: #d79922;
-  font-weight: lighter;
-  position: relative;
-}
+@use 'variables';
 
-/* User avatar */
-#user-header img h2 {
+/* Mixin */
+@mixin vertical-align {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+#user-header {
+  height: 10%;
+  width: 100%;
+  display: variables.$flex-box;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: variables.$transparent-cubes;
+  background-color: variables.$mustard;
+  font-weight: lighter;
+  position: relative;
+}
+
+/* User avatar */
+#user-header img h2 {
+  @include vertical-align();
+}
+
 /* Username */
 header h2 {
   margin-top: -0.5em;
-  color: #f4f1ec;
+  color: variables.$white;
 }
 
 /* Responsive Design */
+
 /* desktop version */
 @media only screen and (min-width: 1024px) {
   #user-header {
@@ -44,6 +46,6 @@ header h2 {
   }
   header h2 {
     margin-bottom: 3em;
-    color: #f4f1ec;
+    color: variables.$white;
   }
 }

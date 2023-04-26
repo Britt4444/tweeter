@@ -1,8 +1,5 @@
-/* Page colours */
-/* Geometric background */
-/* Fonts */
-/* Displays */
-/* Recurring Values */
+@use 'variables';
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -11,7 +8,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -19,10 +15,11 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  background-color: #f4f1ec;
+  background-color: variables.$white;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: variables.$source-sans;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -31,10 +28,11 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 main {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
   text-align: center;
-  background-color: #f4f1ec;
+  background-color: variables.$white;
 }
