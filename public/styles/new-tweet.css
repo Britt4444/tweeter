@@ -77,9 +77,10 @@ form output.counter {
   display: none;
   text-align: left;
   border: red solid 4px;
+  border-radius: 20px;
   font-weight: lighter;
   color: red;
-  margin: 2em 2.5em 0em 2.5em;
+  margin: 2em 2.5em 0em 2em;
   padding: 0.5em;
   padding-left: 1em;
 }
