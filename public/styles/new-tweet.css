@@ -88,7 +88,7 @@ form output.counter {
 /* desktop version */
 @media only screen and (min-width: 1024px) {
   section.new-tweet {
-    margin-left: 42%;
+    margin-left: 37%;
     margin-top: -9em;
     width: 68%;
   }

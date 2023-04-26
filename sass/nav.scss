@@ -4,7 +4,7 @@
 nav {
   font-family: variables.$bungee;
   color: variables.$white;
-  height: 20%;
+  height: 5%;
   width: 100%;
   background-color: variables.$mustard;
   display: variables.$flex-box;
@@ -17,7 +17,9 @@ nav {
   /* TWEETER */
   h1 {
     align-self: center;
-    font-size: 36px;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   /* contains <p> and span button */
@@ -54,6 +56,9 @@ nav {
     position: fixed;
     background-image: variables.$none;
     height: 120px;
+  }
+  h1 {
+    font-size: 36px;
   }
 }
 
